@@ -1,0 +1,13 @@
+
+ <div class="flex flex-col sm:flex-row items-start border-bottom sm:items-center justify-between bg-white p-4 rounded-xl  hover:shadow-md transition">
+    <img [src]="oneMeal.image" alt="Meal" class="w-full sm:w-24 h-24 rounded-md object-cover mb-3 sm:mb-0">
+    <div class="flex-1 sm:px-4 w-full">
+      <h3 class="text-lg font-semibold text-gray-800">{{oneMeal.name}}</h3>
+      <p class="text-gray-600 text-sm mt-1">{{oneMeal.desc}}</p>
+    </div>
+   <!-- <div (click)="speak(oneMeal.desc)"> <i class="fa-solid text-lg fa-volume-high cursor-pointer" ></i></div> -->
+    <div class="text-left sm:text-right w-full sm:w-auto mt-3 sm:mt-0">
+      <span class="text-amber-500 font-bold text-lg block mb-2">{{oneMeal.price}} ج.م</span>
+     <app-addbtn [oneMeal]="oneMeal"></app-addbtn>
+    </div>
+  </div>

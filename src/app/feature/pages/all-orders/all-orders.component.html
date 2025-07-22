@@ -1,0 +1,59 @@
+
+
+<div class="py-30"><app-header [header]="'سجل الطلبات'"></app-header></div>
+
+<div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6  items-stretch">
+  @for (order of AllOrders(); track order.id) {
+    <div class="bg-white rounded-2xl shadow-lg p-5 border border-gray-200">
+      
+      <!-- Customer Info -->
+      <div class="mb-4">
+        <h2 class="text-xl font-semibold text-[#592f15] mb-1">🧑 client name : {{ order.customer?.name }}</h2>
+        <p class="text-gray-700">📍 Address: {{ order.customer?.address }}</p>
+        <p class="text-gray-700">📞 Phone: {{ order.customer?.phone }}</p>
+        <p>
+          <span class="font-semibold">Occasion?</span> 
+          {{ order.customer?.occasion ? '🎉 Yes' : 'No' }}
+        </p>
+      </div>
+
+      
+     <!-- Product List -->
+<div class="products-container bg-gray-100 rounded-lg p-3 mb-4 h-60 overflow-y-auto">
+  <h3 class="text-lg font-semibold text-gray-800 mb-2">🛒 Products:</h3>
+  <ul class="space-y-3">
+    @for (product of order.products; track product.id) {
+      <li class="bg-white p-3 rounded-md shadow-sm flex gap-3 items-start">
+        <img [src]="product.image" alt="product image" class="w-16 h-16 object-cover rounded-md">
+        <div>
+          <p class="font-medium text-gray-800">{{ product.name }}</p>
+          <p class="text-sm text-gray-500">
+            Quantity: {{ product.quantity }} | Price: {{ product.price }} EGP
+          </p>
+          <p class="font-medium text-gray-500">
+            Total: {{ product.price * product.quantity }} EGP
+          </p>
+          <p>@if (product.offer) {<p class="text-gray-800 font-medium text-sm sm:text-base">offer 🏷️ </p>}</p>
+        </div>
+      </li>
+    }
+  </ul>
+</div>
+
+
+<!-- 🧾 Total Price -->
+<p class="text-right my-4 font-semibold text-lg text-green-700 mt-2">
+  🧾 Total Price: {{ getOrderTotal(order) }} EGP
+</p>
+
+
+      <!-- Complete Button -->
+      <button 
+        (click)="completeOrder(order.id)" 
+        class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-4 rounded-xl cursor-pointer transition">
+        ✅ Complete
+      </button>
+    </div>
+  }
+</div>
+

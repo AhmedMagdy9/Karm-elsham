@@ -1,0 +1,25 @@
+  <div class="relative border-r-4 border-amber-500 ml-4">
+    <!-- عنصر طلب -->
+    <div class="mb-10 ml-8 relative group">
+      <!-- الدائرة -->
+      <div class="absolute w-4 h-4 bg-amber-500 rounded-full -left-2 top-2 group-hover:scale-125 transition"></div>
+
+      <div class="rounded-xl shadow-md hover:shadow-xl transition p-5 pl-6 flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center">
+        <!-- صورة -->
+        <img [src]="oneMeal.image" class="w-24 h-24 rounded-lg object-cover shadow-md flex-shrink-0" alt="meal image">
+
+        <!-- تفاصيل -->
+        <div class="grid   lg:grid-cols-4 gap-8  items-center w-full">
+          <h3 class="text-lg sm:text-xl font-semibold text-gray-800">{{oneMeal.name}}</h3>
+          <div class="lg:text-center">
+            <p><span (click)="updateOrder(oneMeal.id , oneMeal.quantity-1)" class="font-bold text-red-600 text-2xl cursor-pointer me-2">-</span>{{oneMeal.quantity}}<span (click)="updateOrder(oneMeal.id , oneMeal.quantity+1)" class="font-bold text-green-600 text-xl cursor-pointer ms-2">+</span></p>
+            <p>Quantity</p>
+            <p class="text-gray-600 text-sm sm:text-base"> {{oneMeal.quantity}}  × {{oneMeal.price}} EG</p>
+          </div>  
+           <p class="text-gray-800 font-medium text-sm sm:text-base">Total : {{oneMeal.price * oneMeal.quantity}} EG </p>
+          <div> <button (click)="removeOrder(oneMeal.id)"  class="text-sm bg-red-500 px-4  py-2 text-white rounded-lg hover:bg-red-600 cursor-pointer transition">Remove </button></div>
+          @if (oneMeal.offer) {<p class="text-gray-800 font-medium text-sm sm:text-base">offer 🏷️ </p>}
+        </div>
+      </div>
+    </div>
+  </div>

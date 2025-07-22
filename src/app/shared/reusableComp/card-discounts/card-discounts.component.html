@@ -1,0 +1,20 @@
+
+  <div class="grid grid-cols-1 m-2  lg:grid-cols-3    bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+    
+    <div >
+    <img class="h-48 w-full  object-contain" [src]="oneMeal.image" alt="Meal Image" />
+    </div>
+
+    <div class=" col-span-2 p-6 flex flex-col  justify-between">
+    <div class="text-center">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">{{oneMeal.name}}</h2>
+      <p class="text-gray-500 text-sm mb-4">{{oneMeal.desc}}</p>
+    </div>
+    <div class="flex items-center justify-around">
+      <span class="text-lg line-through font-bold text-red-600">{{oneMeal.price  }} EG</span>
+      <span class="text-lg  font-bold text-amber-500">{{oneMeal.price - 25  }} EG</span>
+     <app-addbtn [oneMeal]="oneMeal"></app-addbtn>
+    </div>
+    </div>
+
+    </div>

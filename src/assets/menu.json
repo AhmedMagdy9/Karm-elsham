@@ -1,0 +1,391 @@
+[
+ 
+  {
+    
+   "category": "سندويتشات الشاورما",
+
+    "items":[
+  {
+    "id": 1,
+    "name": "سندوتش شاورما لحمه L",
+    "image": "https://i.ibb.co/VYxS8zgL/7ad61e3c-30b3-41bd-a0fd-29986a788a00.jpg",
+    "offer": false,
+    "desc": "شاورما لحمة متبلة بتوابل الشام، في عيش سوري محمّص مع ثومية وصوص دقة.",
+    "price": 105,
+    "quantity": 1
+  },
+  {
+    "id": 2,
+    "name": "سندوتش شاورما لحمه موتزاريلا L",
+    "image": "https://i.ibb.co/LdD1VZbL/9ded69bd-c755-4338-ad5a-2dd5965f0268.jpg",
+    "offer": true,
+    "desc": "شاورما لحمة مع جبنة موتزاريلا سايحة، في عيش سوري لذيذ.",
+    "price": 120,
+    "quantity": 1
+  },
+  {
+    "id": 3,
+    "name": "سندوتش شاورما لحمه XL",
+    "image": "https://i.ibb.co/7JcNR8CQ/9f96264d-df59-4c06-883b-2c589ee3dfe1.jpg",
+    "offer": false,
+    "desc": "سندوتش XL مليان شاورما لحمة متبلة مع صوصات مخصوصة من كرم الشام.",
+    "price": 120,
+    "quantity": 1
+  },
+  {
+    "id": 4,
+    "name": "سندوتش شاورما لحمه موتزاريلا XL",
+    "image": "https://i.ibb.co/4nSryWgt/40a9800e-9d86-4772-9e30-c1c5b72f93b9.jpg",
+    "offer": true,
+    "desc": "جرعة مضاعفة من الشاورما والجبنة الموتزاريلا السايحة في سندوتش XL.",
+    "price": 135,
+    "quantity": 1
+  },
+  {
+    "id": 5,
+    "name": "سندوتش شاورما ميكس L",
+    "image": "https://i.ibb.co/cSFjcb5t/b6daed95-5851-4045-aafb-44c8e96104da.jpg",
+    "offer": true,
+    "desc": "خليط مميز من شاورما اللحمة والدجاج في حجم L، الطعم على أصوله.",
+    "price": 90,
+    "quantity": 1
+  },
+  {
+    "id": 6,
+    "name": "سندوتش شاورما ميكس XL",
+    "image": "https://i.ibb.co/ns5B3D2D/96e7faba-a7e1-4628-a1d8-9fa1903bb8eb.jpg",
+    "offer": true,
+    "desc": "أكبر حجم من ميكس الشاورما، لعشاق التنويع والنَفس الكبير.",
+    "price": 110,
+    "quantity": 1
+  }
+     ]
+
+
+  },
+  {
+     "category": "الماريا",
+     "items" :[
+  {
+    "id": 7,
+    "name": "وجبة ماريا شاورما دجاج",
+    "image": "https://i.ibb.co/rfGz5B1W/dd16d8e9-4c68-406e-92c4-c8ffaa427cc8.jpg",
+    "offer": true,
+    "desc": "وجبة دجاج شاورما كاملة داخل خبز ماريا المحشو، مع صوصات لذيذة.",
+    "price": 110,
+    "quantity": 1
+  },
+  {
+    "id": 8,
+    "name": "وجبة ماريا شاورما لحم",
+    "image": "https://i.ibb.co/rfGz5B1W/dd16d8e9-4c68-406e-92c4-c8ffaa427cc8.jpg",
+    "offer": false,
+    "desc": "وجبة لحم شاورما داخل ماريا محشوة ومشوية، بنكهة شامية أصيلة.",
+    "price": 135,
+    "quantity": 1
+  },
+  {
+    "id": 9,
+    "name": "ماريا ميكس",
+    "image": "https://i.ibb.co/rfGz5B1W/dd16d8e9-4c68-406e-92c4-c8ffaa427cc8.jpg",
+    "offer": true,
+    "desc": "ماريا محشوة بشاورما لحمة ودجاج، لكل اللي مش قادر يختار!",
+    "price": 125,
+    "quantity": 1
+  },
+  {
+    "id": 10,
+    "name": "تشيزى ماريا",
+    "image": "https://i.ibb.co/rfGz5B1W/dd16d8e9-4c68-406e-92c4-c8ffaa427cc8.jpg",
+    "offer": false,
+    "desc": "ماريا محشوة بشاورما وطبقات جبنة سايحة تذوب في الفم.",
+    "price": 145,
+    "quantity": 1
+  },
+  {
+    "id": 11,
+    "name": "كوردون ماريا",
+    "image": "https://i.ibb.co/rfGz5B1W/dd16d8e9-4c68-406e-92c4-c8ffaa427cc8.jpg",
+    "offer": true,
+    "desc": "ماريا مميزة على طريقة كوردون بلو، مليانة دجاج وجبنة مع لمسة سحرية.",
+    "price": 130,
+    "quantity": 1
+  }
+           ]
+
+  },
+  {
+    "category": "سندويتشات الغربي",
+    "items":[
+  {
+    "id": 12,
+    "name": "سندوتش كريسبي فرنسوي",
+    "image": "https://i.ibb.co/NdYcpJh6/a27a5845-2d63-417f-a76a-20021ebc67ea.jpg",
+    "offer": false,
+    "desc": "سندوتش كريسبي دجاج مقرمش في عيش فرنسوي طازج وصوص رانش.",
+    "price": 90,
+    "quantity": 1
+  },
+  {
+    "id": 13,
+    "name": "سندوتش كريسبي سوري",
+    "image": "https://i.ibb.co/k6gwkHB1/e8c1faf6-446f-426d-b03d-d3ccf0aefd68-1.jpg",
+    "offer": true,
+    "desc": "كريسبي سوري على الطريقة الشامية، مقرمش من بره وطري من جوه.",
+    "price": 90,
+    "quantity": 1
+  },
+  {
+    "id": 14,
+    "name": "سندوتش زنجر فرنسوي",
+    "image": "https://i.ibb.co/LXN6LPR2/61688bbe-120e-4654-85ef-6b78f0c96cb1.jpg",
+    "offer": true,
+    "desc": "زنجر سبايسي في عيش فرنسوي مع خس ومايونيز، نار حرفيًا!",
+    "price": 90,
+    "quantity": 1
+  },
+  {
+    "id": 15,
+    "name": "سندوتش زنجر سوري",
+    "image": "https://i.ibb.co/3YFJr70h/763053d3-51cd-4a4b-8429-e8e409c278d6-1.jpg",
+    "offer": false,
+    "desc": "سندوتش زنجر حار في عيش سوري رفيع وثومية لاذعة.",
+    "price": 90,
+    "quantity": 1
+  },
+  {
+    "id": 16,
+    "name": "سندوتش برجر لحم سنجل",
+    "image": "https://i.ibb.co/NdYcpJh6/a27a5845-2d63-417f-a76a-20021ebc67ea.jpg",
+    "offer": false,
+    "desc": "برجر لحم مشوي قطعة واحدة مع خس وطماطم في خبز محمص.",
+    "price": 85,
+    "quantity": 1
+  },
+  {
+    "id": 17,
+    "name": "سندوتش برجر لحم جامبو",
+    "image": "https://i.ibb.co/k6gwkHB1/e8c1faf6-446f-426d-b03d-d3ccf0aefd68-1.jpg",
+    "offer": true,
+    "desc": "قطعة لحم ضخمة مع جبنة وصوصات، لعشاق البرجر الكبير.",
+    "price": 145,
+    "quantity": 1
+  },
+  {
+    "id": 18,
+    "name": "سندوتش سوبريم كرسبي",
+    "image": "https://i.ibb.co/LXN6LPR2/61688bbe-120e-4654-85ef-6b78f0c96cb1.jpg",
+    "offer": true,
+    "desc": "كريسبي دجاج مع جبنة وصوص سوبريم مخصوص داخل ساندوتش فاخر.",
+    "price": 100,
+    "quantity": 1
+  },
+  {
+    "id": 19,
+    "name": "سندوتش سوبريم زنجر",
+    "image": "https://i.ibb.co/3YFJr70h/763053d3-51cd-4a4b-8429-e8e409c278d6-1.jpg",
+    "offer": false,
+    "desc": "زنجر سبايسي داخل خبز طري مع صوص سوبريم الحار.",
+    "price": 100,
+    "quantity": 1
+  }
+      ]
+
+
+  },
+  {
+    "category": "بروستد",
+    "items":[
+  {
+    "id": 20,
+    "name": "وجبه قطعتين اوريجينال",
+    "image": "https://i.ibb.co/spFxpL98/ea980730-ffec-47f1-98bb-8f7e513cb53e.jpg",
+    "offer": true,
+    "desc": "وجبة مقرمشة من قطعتين دجاج على الطريقة الأصلية مع صوصات جانبية.",
+    "price": 110,
+    "quantity": 1
+  },
+  {
+    "id": 21,
+    "name": "وجبه قطعتين سبايسي",
+    "image": "https://i.ibb.co/chDK83mc/a11cb097-a9a0-406f-a09b-5d0b9bd92b9a.jpg",
+    "offer": false,
+    "desc": "قطعتين دجاج بروستد حار لعشاق الطعم الناري.",
+    "price": 110,
+    "quantity": 1
+  },
+  {
+    "id": 22,
+    "name": "فرخه بروستد",
+    "image": "https://i.ibb.co/Y7v59Fny/a94e400c-bd46-4c39-8131-fc8622a791ca.jpg",
+    "offer": true,
+    "desc": "فرخة كاملة متبلة ومقلية على الطريقة البروستد، تكفي فردين.",
+    "price": 360,
+    "quantity": 1
+  },
+  {
+    "id": 23,
+    "name": "نصف فرخه بروستد",
+    "image": "https://i.ibb.co/spFxpL98/ea980730-ffec-47f1-98bb-8f7e513cb53e.jpg",
+    "offer": false,
+    "desc": "نصف فرخة بروستد مقرمشة مع بطاطس وصوص.",
+    "price": 180,
+    "quantity": 1
+  },
+  {
+    "id": 24,
+    "name": "فرخه بروستد سبايسي",
+    "image": "https://i.ibb.co/chDK83mc/a11cb097-a9a0-406f-a09b-5d0b9bd92b9a.jpg",
+    "offer": true,
+    "desc": "فرخة كاملة بروستد حار لهواة النكهة الجريئة.",
+    "price": 360,
+    "quantity": 1
+  },
+  {
+    "id": 25,
+    "name": "نص فرخه بروستد سبايسي",
+    "image": "https://i.ibb.co/Y7v59Fny/a94e400c-bd46-4c39-8131-fc8622a791ca.jpg",
+    "offer": false,
+    "desc": "نصف فرخة بروستد حار مع صوصات اختيارية.",
+    "price": 180,
+    "quantity": 1
+  }
+       ]
+
+
+  },
+  {
+    "category": "عروض",
+    "items":[
+  {
+    "id": 26,
+    "name": "ابن المعلم ميكس كريسبي فرنسوي",
+    "image": "https://i.ibb.co/qFyFfY7p/images-1.jpg",
+    "offer": false,
+    "desc": "عرض خاص يجمع بين ميكس كريسبي حار وعادي في عيش فرنسوي مميز.",
+    "price": 135,
+    "quantity": 1
+  },
+  {
+    "id": 27,
+    "name": "ابن المعلم ميكس شاورما فرنسوي",
+    "image": "https://i.ibb.co/S7thz9SG/images-2.jpg",
+    "offer": false,
+    "desc": "عيش فرنسوي مليان شاورما لحمة ودجاج على طريقة ابن المعلم.",
+    "price": 160,
+    "quantity": 1
+  },
+  {
+    "id": 28,
+    "name": "ابن المعلم فراخ فرنسوي",
+    "image": "https://i.ibb.co/xqFKLCR6/images-3.jpg",
+    "offer": false,
+    "desc": "كريسبي فراخ في عيش فرنسوي مع صوص خاص مميز.",
+    "price": 135,
+    "quantity": 1
+  },
+  {
+    "id": 29,
+    "name": "ابن المعلم ميكس كريسبي سوري",
+    "image": "https://i.ibb.co/gM4yTPTP/images-4.jpg",
+    "offer": false,
+    "desc": "سندوتش سوري بحشوة مزدوجة من كريسبي دجاج عادي وسبايسي.",
+    "price": 135,
+    "quantity": 1
+  },
+  {
+    "id": 30,
+    "name": "ابن المعلم ميكس شاورما سوري",
+    "image": "https://i.ibb.co/LhczkBgH/images-5.jpg",
+    "offer": false,
+    "desc": "عيش سوري خفيف محشي شاورما لحمة ودجاج، عرض ابن المعلم.",
+    "price": 160,
+    "quantity": 1
+  },
+  {
+    "id": 31,
+    "name": "ابن المعلم فراخ سوري",
+    "image": "https://i.ibb.co/V0NHrR6W/images.jpg",
+    "offer": false,
+    "desc": "كريسبي دجاج مقرمش في عيش سوري مع صوص ثومية مميز.",
+    "price": 135,
+    "quantity": 1
+  },
+  {
+    "id": 32,
+    "name": "بوكس ابن المعلم فراخ سوري",
+    "image": "https://i.ibb.co/qFyFfY7p/images-1.jpg",
+    "offer": false,
+    "desc": "بوكس كامل فيه كريسبي سوري + بطاطس + صوصات.",
+    "price": 235,
+    "quantity": 1
+  },
+  {
+    "id": 33,
+    "name": "بوكس ابن المعلم فراخ فرنسوي",
+    "image": "https://i.ibb.co/S7thz9SG/images-2.jpg",
+    "offer": false,
+    "desc": "بوكس كبير بحشوة كريسبي في عيش فرنسوي مع صوصات.",
+    "price": 235,
+    "quantity": 1
+  },
+  {
+    "id": 34,
+    "name": "بوكس ابن المعلم ميكس سوري",
+    "image": "https://i.ibb.co/xqFKLCR6/images-3.jpg",
+    "offer": false,
+    "desc": "بوكس ابن المعلم يجمع كريسبي وميكس في خبز سوري مميز.",
+    "price": 270,
+    "quantity": 1
+  },
+  {
+    "id": 35,
+    "name": "بوكس ابن المعلم ميكس فرنسوي",
+    "image": "https://i.ibb.co/gM4yTPTP/images-4.jpg",
+    "offer": false,
+    "desc": "بوكس ابن المعلم مع خبز فرنسوي وصوصات لذيذة، الحجم العائلي.",
+    "price": 270,
+    "quantity": 1
+  },
+  {
+    "id": 36,
+    "name": "بوكس ابن المعلم كريسبي فرنسوي",
+    "image": "https://i.ibb.co/LhczkBgH/images-5.jpg",
+    "offer": false,
+    "desc": "كريسبي فرنسوي في بوكس ضخم مع بطاطس ومشروب.",
+    "price": 235,
+    "quantity": 1
+  },
+  {
+    "id": 37,
+    "name": "بوكس ابن المعلم كريسبي سوري",
+    "image": "https://i.ibb.co/V0NHrR6W/images.jpg",
+    "offer": false,
+    "desc": "بوكس كريسبي سوري وسط صوصات وعيش مقرمش.",
+    "price": 235,
+    "quantity": 1
+  }
+       ]
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ 
+  
+
+]

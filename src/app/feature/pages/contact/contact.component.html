@@ -1,0 +1,94 @@
+<div class=" lg:w-1/2 mx-auto mt-30">
+    <form [formGroup]="userDetails" (ngSubmit)="submit()" class="    p-6 bg-white shadow-lg rounded-xl">
+
+  <!-- الاسم -->
+  <div class="mb-6">
+    <label for="name" class="block mb-1 font-medium text-gray-700">الاسم</label>
+    <input
+      id="name"
+      type="text"
+      formControlName="name"
+      placeholder="أدخل اسمك الكامل"
+      class="w-full p-2 outline-none rounded-md transition focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+    @if (userDetails.get('name')?.touched && userDetails.get('name')?.invalid) {
+      <div class="text-red-600 text-sm mt-1">
+        @if (userDetails.get('name')?.errors?.['required']) {
+          <p>الاسم مطلوب</p>
+        }
+        @if (userDetails.get('name')?.errors?.['minlength']) {
+          <p>الاسم يجب أن لا يقل عن 8 حروف</p>
+        }
+        @if (userDetails.get('name')?.errors?.['pattern']) {
+          <p>الاسم يجب أن يحتوي على حروف فقط</p>
+        }
+      </div>
+    }
+  </div>
+
+  <!-- العنوان -->
+  <div class="mb-6">
+    <label for="address" class="block mb-1 font-medium text-gray-700">العنوان</label>
+    <input
+      id="address"
+      type="text"
+      formControlName="address"
+      placeholder="أدخل عنوانك بالتفصيل"
+      class="w-full p-2 border rounded-md transition focus:outline-none focus:ring-2 focus:ring-blue-500" 
+    />
+
+    @if (userDetails.get('address')?.touched && userDetails.get('address')?.invalid) {
+      <div class="text-red-600 text-sm mt-1">
+        @if (userDetails.get('address')?.errors?.['required']) {
+          <p>العنوان مطلوب</p>
+        }
+        @if (userDetails.get('address')?.errors?.['minlength']) {
+          <p>العنوان يجب أن لا يقل عن 10 حروف</p>
+        }
+        @if (userDetails.get('address')?.errors?.['pattern']) {
+          <p>العنوان يجب أن يحتوي على حروف فقط</p>
+        }
+      </div>
+    }
+  </div>
+
+  <!-- رقم الموبايل -->
+  <div class="mb-6">
+    <label for="phone" class="block mb-1 font-medium text-gray-700">رقم الموبايل</label>
+    <input
+      id="phone"
+      type="text"
+      formControlName="phone"
+      placeholder="01xxxxxxxxx"
+       class="w-full p-2 border rounded-md transition focus:outline-none focus:ring-2 focus:ring-blue-500" 
+    />
+
+    @if (userDetails.get('phone')?.touched && userDetails.get('phone')?.invalid) {
+      <div class="text-red-600 text-sm mt-1">
+        @if (userDetails.get('phone')?.errors?.['required']) {
+          <p>رقم الموبايل مطلوب</p>
+        }
+        @if (userDetails.get('phone')?.errors?.['pattern']) {
+          <p>رقم غير صحيح، يجب أن يكون رقم موبايل مصري</p>
+        }
+      </div>
+    }
+  </div>
+
+  <!-- طلب لمناسبة خاصة -->
+  <div class="flex items-center gap-2 mb-6">
+    <input type="checkbox" formControlName="occasion" id="occasion" class="h-4 w-4 text-blue-600" />
+    <label for="occasion" class="text-gray-700">طلب لمناسبة خاصة</label>
+  </div>
+
+  <!-- زر الإرسال -->
+  <button
+  [disabled]="userDetails.invalid"
+    type="submit"
+    class="w-full disabled:bg-blue-900 disabled:cursor-not-allowed cursor-pointer bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
+  >
+    إرسال
+  </button>
+</form>
+</div>
+

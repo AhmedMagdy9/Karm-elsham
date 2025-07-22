@@ -1,0 +1,13 @@
+.products-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.products-container::-webkit-scrollbar-thumb {
+  background-color: #592f15; /* amber-500 */
+  border-radius: 12px;
+}
+
+.products-container::-webkit-scrollbar-thumb:hover {
+  background-color: #592f15; /* amber-600 */
+}
+

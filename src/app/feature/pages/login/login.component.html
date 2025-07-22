@@ -1,0 +1,36 @@
+<form [formGroup]="userForm" (ngSubmit)="submitForm()" class="max-w-md mx-auto p-8 my-30 rounded-2xl bg-white/10 backdrop-blur-md shadow-lg space-y-6">
+
+
+  <h2 class="text-2xl font-bold text-center ">You Are Admin </h2>
+  <h2 class="text-2xl font-bold text-center ">🔐 Login now</h2>
+
+
+  <div class="relative">
+    <input type="text" formControlName="username" placeholder="Username" class="w-full pl-11 pr-4 py-3 rounded-xl border bg-white/30   focus:outline-none focus:ring-2 focus:ring-white/60 transition-all"
+      [class.border-red-500]="userForm.get('username')?.invalid && userForm.get('username')?.touched"
+    />
+    @if (userForm.get('username')?.invalid && userForm.get('username')?.touched) {
+      <p class="text-red-400 text-sm mt-1">Must start with a letter and be at least 3 characters.</p>
+    }
+  </div>
+
+
+ <div class="relative">
+  <input type="password" formControlName="password" placeholder="Password" class="w-full pl-11 pr-10 py-3 rounded-xl border bg-white/30  focus:outline-none focus:ring-2 focus:ring-white/60 transition-all"
+    [class.border-red-500]="userForm.get('password')?.invalid && userForm.get('password')?.touched"
+  />
+  @if (userForm.get('password')?.invalid && userForm.get('password')?.touched) {
+    <p class="text-red-400 text-sm mt-1">
+      Must have capital & small letter, number, and min 8 characters.
+    </p>
+  }
+</div>
+
+
+
+
+  <button type="submit" class="w-full cursor-pointer py-3 rounded-xl bg-gradient-to-r from-pink-500 to-yellow-500 text-white font-semibold hover:opacity-90 transition-all" [disabled]="userForm.invalid" >
+    🚀 Login
+  </button>
+</form>
+

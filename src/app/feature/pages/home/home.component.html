@@ -1,0 +1,86 @@
+<section class="mt-20"></section>
+
+ <!-- moon img and  moon para -->
+<div class=" flex flex-col lg:flex-row justify-center gap-4  bg-[#1A1A1A] ">
+   <!-- moon img -->
+  <div><img  src="/imags/moon.jpg" alt="moon" loading="lazy"></div>
+  <div class="p-2">
+    <!-- moon para -->
+    <p class="text-white text-lg leading-relaxed">
+  🚀 <strong>كرم الشام في الفضاء!</strong> 🌕<br><br>
+
+  بعد ما أكلنا قلوب الملايين على كوكب الأرض، قررنا نوسع شغلنا شوية… وطلعنا فوق شوية، فوق أوي… على سطح القمر! 🛰️🌍<br><br>
+
+  أيوه، زي ما سمعت كده، <strong>كرم الشام</strong> وصل القمر!<br>
+  بعثة خاصة سرية، بقيادة فريق من خبراء الشاورما والكريب، نجحنا في تحقيق حلم البشرية اللي كان دايمًا بيبدأ بسؤال بسيط: <em>"هو في كرم الشام قريب؟"</em><br>
+  والإجابة دلوقتي بقت: <strong>"أيوه، حتى على القمر!"</strong><br><br>
+
+  المهمة كانت صعبة، التحديات كانت ضخمة…<br>
+  العيش السوري طاير من الجاذبية، والكريب كان بيتمشى لوحده على سطح القمر، بس إحنا اتغلبنا على كل العقبات.<br>
+  زرعنا العلم… مش بس علم مصر، لأ… ده علم <strong>كرم الشام</strong>! 🏳️<br>
+  رمز الطعم، والكرم، واللمة الحلوة، اتثبت النهارده على سطح القمر!<br><br>
+
+  جاري الآن تجهيز أول فرع رسمي لنا خارج كوكب الأرض — فيه صالة انتظار فيها مناظر بانورامية للأرض، وركن مخصوص للطلبات الصاروخية 🚀، وتوصيل مجاني للمستعمرات القمرية 👩‍🚀🌯.
+    تابعونا علشان الإعلان الرسمي عن <strong>فرع القمر – قريبا جدًا!</strong><br>
+  واحجز مكانك من دلوقتي قبل ما الزحمة توصل للفضاء الخارجي! 🤩</p>
+
+  </div>
+</div>
+
+ <!-- Masonry Grid -->
+<div  class="px-4 py-10 ">
+  <app-header [header]="'لقطات من امام مطعمنا'"></app-header>
+  <!-- Masonry Grid -->
+ <div class="columns-1 sm:columns-2 md:columns-3 gap-4">
+  <img src="/imags/restrant.jpg" class="mb-4 w-full rounded-xl shadow" alt="food" loading="lazy" />
+  <img src="/imags/restrant1.jpg" class="mb-4 w-full rounded-xl shadow" alt="food" loading="lazy" />
+  <img src="/imags/restrant2.jpg" class="mb-4 w-full rounded-xl shadow" alt="food" loading="lazy" />
+  <img src="/imags/restrant3.jpg" class="mb-4 w-full rounded-xl shadow" alt="food" loading="lazy" />
+  <img src="/imags/restrant4.jpg" class="mb-4 w-full rounded-xl shadow" alt="food" loading="lazy" />
+  <img src="/imags/restrant5.jpg" class="mb-4 w-full rounded-xl shadow" alt="food" loading="lazy" />
+</div>
+
+</div>
+
+<!-- Discounts products -->
+<div class="flex flex-col lg:flex-row w-[90%] mx-auto py-12">
+ <div class="  w-[90%] lg:w-3/4 mx-auto rounded-xl">
+<app-header [header]="'Discounts'"></app-header>
+
+ @for (section of menuItems(); track $index) {
+  @for (item of section.items; track $index) {
+    @if (item.offer == true) {
+      <app-card-discounts [oneMeal]="item"></app-card-discounts>
+    }
+  }
+}
+
+</div>
+
+<div class=" text-center  lg:w-1/4  py-10">
+<app-sidebar></app-sidebar>
+</div>
+</div>
+
+<!-- Offers products -->
+<div class=" w-[90%] lg:w-3/4 py-12  mx-auto" >
+<app-header [header]="'Offers'"></app-header>
+ <div class="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-6">
+   @for (section of menuItems(); track $index) {
+  @if (section.category == 'عروض') {
+    @for (item of section.items; track $index) {
+      <app-card-offers [oneMeal]="item"></app-card-offers>
+    }
+  }
+}
+
+
+
+
+
+ </div>
+
+
+</div>
+
+
