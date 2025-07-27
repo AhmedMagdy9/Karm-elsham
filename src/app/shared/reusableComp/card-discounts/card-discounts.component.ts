@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component,  Input } from '@angular/core';
 import { Item, Meal } from '../../interfaces/meal';
 import { AddbtnComponent } from "../addbtn/addbtn.component";
 
@@ -12,5 +12,6 @@ import { AddbtnComponent } from "../addbtn/addbtn.component";
 export class CardDiscountsComponent {
 
    @Input() oneMeal!:Item 
+  @Input() discountNum:number = 25
  
 }

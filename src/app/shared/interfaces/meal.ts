@@ -5,11 +5,42 @@ export interface Meal {
 }
 
 export interface Item {
+  firebaseId: string; // ده اللي هيتولد تلقائي
   id: number;
   name: string;
-  image: string;
-  offer: boolean;
   desc: string;
+  image: string;
   price: number;
-  quantity : number;
+  offer: boolean;
+  quantity: number;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

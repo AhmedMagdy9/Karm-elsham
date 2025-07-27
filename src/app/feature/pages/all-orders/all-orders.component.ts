@@ -13,7 +13,6 @@ import { AlertService } from '../../../core/services/alert/alert.service';
 export class AllOrdersComponent implements OnInit {
   private firebaseService = inject(FirebaseService)
   private alertService = inject(AlertService)
-
   AllOrders: WritableSignal<Order[]>  =signal([]) 
  
 
@@ -40,7 +39,7 @@ export class AllOrdersComponent implements OnInit {
       next:(res)=>{
         console.log(res)
         this.getAllOrders()
-        this.alertService.warning('تم حذف الطلب بنجاح Admin')
+        this.alertService.success('تم توصيل الطلب بنجاح ')
 
       },
       error:(err)=>{

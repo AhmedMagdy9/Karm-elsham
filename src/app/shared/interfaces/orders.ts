@@ -7,7 +7,7 @@ export interface Order {
     occasion?: boolean;
   };
   products?: any[];
-  name?: string; // لو النوع القديم من الأوردرات
+  name?: string;      
   quantity?: number;
   price?: number;
   address?: string;

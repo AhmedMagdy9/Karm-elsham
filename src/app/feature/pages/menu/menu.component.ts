@@ -14,7 +14,6 @@ import { FirebaseService } from '../../../core/services/firebase/firebase.servic
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent implements OnInit {
- private mealsService = inject(MealsService)
  private firebaseService = inject(FirebaseService)
 
 
@@ -30,16 +29,27 @@ export class MenuComponent implements OnInit {
   }
 
 
-
-
    getMenu(){
     this.firebaseService.getMenu().subscribe({
       next : (res)=>{
         this.menuItems.set(res)
+        console.log(res)
       },
       error:(err)=>
         console.log(err)
     })
+  }
+
+
+  deletemeal(category: string, firebaseId: string){
+    this.firebaseService.deleteMeal(category , firebaseId).subscribe({
+      next:(res)=>{
+        console.log(res)
+      },
+      error:(err)=> console.log(err)
+
+    })
+
   }
 
   

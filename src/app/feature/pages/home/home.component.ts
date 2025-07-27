@@ -24,6 +24,8 @@ export class HomeComponent implements OnInit  {
 
   ngOnInit(): void {
     this.getMenu()
+    
+   
    
   }
 
@@ -31,13 +33,21 @@ export class HomeComponent implements OnInit  {
   
 
   getMenu(){
-    this.firebaseService.getMenu().subscribe({
-      next : (res)=>{
-        this.menuItems.set(res)
-      },
-      error:(err)=>
-        console.log(err)
-    })
+   this.firebaseService.getMenu().subscribe({
+  next: (res) => {
+    this.menuItems.set(res) ;
+
+    console.log(res)
+  },
+  error: (err) => {
+    console.error('حصل خطأ في تحميل المنيو:', err);
+    // ممكن تعرض alert أو toast هنا
+  },
+  
+});
   }
+
+
+
 
 }

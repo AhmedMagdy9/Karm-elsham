@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Component, Input } from '@angular/core';
-import { Item, Meal } from '../../interfaces/meal';
+import { Item } from '../../interfaces/meal';
 import { AddbtnComponent } from "../addbtn/addbtn.component";
 
 @Component({

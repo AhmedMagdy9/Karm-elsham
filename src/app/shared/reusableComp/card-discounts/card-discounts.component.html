@@ -12,7 +12,8 @@
     </div>
     <div class="flex items-center justify-around">
       <span class="text-lg line-through font-bold text-red-600">{{oneMeal.price  }} EG</span>
-      <span class="text-lg  font-bold text-amber-500">{{oneMeal.price - 25  }} EG</span>
+      <span class="text-lg  font-bold text-amber-500">{{oneMeal.price - discountNum  }} EG</span>
+      
      <app-addbtn [oneMeal]="oneMeal"></app-addbtn>
     </div>
     </div>

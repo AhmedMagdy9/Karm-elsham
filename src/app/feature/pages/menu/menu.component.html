@@ -1,5 +1,5 @@
 
-<!-- <div class="pt-40"><app-header [header]="'Menu'"></app-header></div> -->
+
 
 
 <!-- search input -->
@@ -37,7 +37,7 @@
       
      @if (item.name.includes(searchWord)) {
      
-      <app-card-meal [oneMeal]="item"></app-card-meal>
+      <app-card-meal (getMenuFromParent)="getMenu()" [category]="section.category"  [oneMeal]="item"></app-card-meal>
      }
   }
     }

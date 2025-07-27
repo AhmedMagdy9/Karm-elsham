@@ -1,13 +1,110 @@
 
- <div class="flex flex-col sm:flex-row items-start border-bottom sm:items-center justify-between bg-white p-4 rounded-xl  hover:shadow-md transition">
-    <img [src]="oneMeal.image" alt="Meal" class="w-full sm:w-24 h-24 rounded-md object-cover mb-3 sm:mb-0">
-    <div class="flex-1 sm:px-4 w-full">
-      <h3 class="text-lg font-semibold text-gray-800">{{oneMeal.name}}</h3>
-      <p class="text-gray-600 text-sm mt-1">{{oneMeal.desc}}</p>
-    </div>
-   <!-- <div (click)="speak(oneMeal.desc)"> <i class="fa-solid text-lg fa-volume-high cursor-pointer" ></i></div> -->
-    <div class="text-left sm:text-right w-full sm:w-auto mt-3 sm:mt-0">
-      <span class="text-amber-500 font-bold text-lg block mb-2">{{oneMeal.price}} ج.م</span>
-     <app-addbtn [oneMeal]="oneMeal"></app-addbtn>
-    </div>
+<div class="flex flex-col sm:flex-row items-start border-bottom sm:items-center justify-between bg-white p-4 rounded-xl hover:shadow-md transition">
+  <img [src]="oneMeal.image" alt="Meal" class="w-full sm:w-24 h-24 rounded-md object-cover mb-3 sm:mb-0" />
+  <div class="flex-1 sm:px-4 w-full">
+    <h3  class="text-lg font-semibold text-gray-800">{{ oneMeal.name }}</h3>
+    <p class="text-gray-600 text-sm mt-1">{{ oneMeal.desc }}</p>
   </div>
+
+  <div class="text-left sm:text-right w-full sm:w-auto mt-3 sm:mt-0">
+    <span class="text-amber-500 font-bold text-lg block mb-2">{{ oneMeal.price }} ج.م</span>
+
+    <app-addbtn [oneMeal]="oneMeal"></app-addbtn>
+
+    @if (isLoggedIn$) {
+      <!-- remove meal -->
+      <button (click)="deletemeal(category, oneMeal.firebaseId)" class="bg-red-500 hover:bg-red-600 flex items-center gap-2 cursor-pointer text-white text-sm px-4 py-2 mt-4 rounded-xl">
+        <i class="fa-solid fa-trash"></i> Remove
+      </button>
+        <!-- open modal -->
+        <button
+        (click)="toggleModal()"
+         type="button"
+          class="cursor-pointer mt-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold text-sm shadow-md hover:from-indigo-600 hover:to-purple-700 transition-all duration-200">
+          Update
+          </button>
+    }
+  </div>
+</div>
+
+
+ <!-- modal -->
+@if (showModal()) {
+  <!-- modal -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm ">
+ <div class="bg-white dark:bg-[#1f1f1f] rounded-3xl shadow-2xl w-full max-w-lg mx-auto p-8 border border-gray-200 dark:border-gray-700">
+  <!-- header -->
+   <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold text-gray-800 dark:text-white">🧾 تعديل الوجبة</h2>
+      <button (click)="toggleModal()"
+        class="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:scale-110 transition">
+        <svg class="w-5 h-5 text-gray-500 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  <form class="space-y-5">
+
+      <!-- Name -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">اسم الوجبة</label>
+        <div class="flex gap-3">
+          <input  type="text" id="name" [value]="oneMeal.name"
+            class="w-full px-4 py-2.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none">
+          <button type="button"
+            class="px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 text-sm font-medium"
+            (click)="updateField(category, oneMeal.firebaseId, 'name')">
+            تعديل
+          </button>
+        </div>
+      </div>
+
+      <!-- Price -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">السعر</label>
+        <div class="flex gap-3">
+          <input  type="number" id="price" [value]="oneMeal.price" 
+            class="w-full px-4 py-2.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none">
+          <button type="button"
+            class="px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 text-sm font-medium"
+            (click)="updateField(category, oneMeal.firebaseId, 'price')">
+            تعديل
+          </button>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div>
+        <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">رابط الصورة</label>
+        <div class="flex gap-3">
+          <input type="text" id="image" [value]="oneMeal.image" #imageInput
+            class="w-full px-4 py-2.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none">
+          <button type="button" class="px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 text-sm font-medium"
+            (click)="updateField(category, oneMeal.firebaseId, 'image')">
+            تعديل
+          </button>
+        </div>
+      </div>
+
+      <!-- Offer -->
+      <div class="flex items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <input type="checkbox" id="offer" [checked]="oneMeal.offer" #offerInput
+            class="accent-indigo-600 w-5 h-5 rounded focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600">
+          <label class="text-sm text-gray-700 dark:text-gray-300">عرض خاص؟</label>
+        </div>
+        <button type="button"
+          class="px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 text-sm font-medium"
+          (click)="updateField(category, oneMeal.firebaseId, 'offer')">
+          تعديل
+        </button>
+      </div>
+
+    </form>
+ </div>
+</div>
+}
+
+
+
