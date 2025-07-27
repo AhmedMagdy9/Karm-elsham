@@ -17,7 +17,7 @@ export class ContactComponent {
 
  userDetails: FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required,Validators.minLength(8), Validators.pattern(/^[\u0600-\u06FFa-zA-Z\s]+$/) ]),
-    address: new FormControl('', [ Validators.required, Validators.minLength(10), Validators.pattern(/^[\u0600-\u06FFa-zA-Z\s]+$/) ]),
+    address: new FormControl('', [ Validators.required, Validators.minLength(10), Validators.pattern(/^[\u0600-\u06FFa-zA-Z0-9\s]+$/)]),
     phone: new FormControl('', [  Validators.required,  Validators.pattern(/^01[0125][0-9]{8}$/)  ]),
     occasion: new FormControl(false) 
   });
